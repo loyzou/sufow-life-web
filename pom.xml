@@ -1,23 +1,24 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.sufow</groupId>
-  <artifactId>sufowLife</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <properties>
-  	 <spring-framework.version>4.2.0.RELEASE</spring-framework.version>
-  </properties>
-  <dependencies>
-  		<dependency>
-  			<groupId>org.springframework</groupId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.sufow</groupId>
+	<artifactId>sufowLife</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<spring-framework.version>4.2.0.RELEASE</spring-framework.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
-  			<version>4.2.0.RELEASE</version>
-  		</dependency>
-  		<dependency>
-  			<groupId>org.springframework</groupId>
-  			<artifactId>spring-core</artifactId>
-  			<version>${spring-framework.version}</version>
-  		</dependency>
-  		<dependency>
+			<version>4.2.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring-framework.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
 			<version>${spring-framework.version}</version>
@@ -42,43 +43,69 @@
 			<artifactId>spring-web</artifactId>
 			<version>${spring-framework.version}</version>
 		</dependency>
-  </dependencies>
-  
-  <!-- 设置打包 -->
-  <build>
-  	<!-- 资源目录 -->
-  	<sourceDirectory>src/main/java</sourceDirectory>
-  	<!-- 输出目录 -->
-  	<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
-  	
-  	<!-- 插件 -->
-  	<plugins>
-  		<!-- 依赖插件，复制mavenjar至lib下 -->
-  		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-dependency-plugin</artifactId>
-			<executions>
-				<execution>
-					<id>copy-dependencies</id>
-					<phase>package</phase>
-					<goals>
-						<goal>copy-dependencies</goal>
-					</goals>
-					<configuration>
-						<outputDirectory>src/main/webapp/WEB-INF/lib</outputDirectory>
-						<excludeTransitive>false</excludeTransitive>
-						<stripVersion>false</stripVersion>
-						<overWriteIfNewer>true</overWriteIfNewer>
-						<includeScope>runtime</includeScope>
-						<excludes>
-							<excludeArtifactIds>XmlSchema</excludeArtifactIds>
-						</excludes>
-					</configuration>
-				</execution>
-			</executions>
- 		</plugin>
-  	</plugins>
-  </build>
-  
-  
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.xcb</groupId>
+			<artifactId>xcb-common</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.7.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.7.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.7.4</version>
+		</dependency>
+	</dependencies>
+
+	<!-- 设置打包 -->
+	<build>
+		<!-- 资源目录 -->
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<!-- 输出目录 -->
+		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
+
+		<!-- 插件 -->
+		<plugins>
+			<!-- 依赖插件，复制mavenjar至lib下 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>src/main/webapp/WEB-INF/lib</outputDirectory>
+							<excludeTransitive>false</excludeTransitive>
+							<stripVersion>false</stripVersion>
+							<overWriteIfNewer>true</overWriteIfNewer>
+							<includeScope>runtime</includeScope>
+							<excludes>
+								<excludeArtifactIds>XmlSchema</excludeArtifactIds>
+							</excludes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+
 </project>
