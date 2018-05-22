@@ -1,5 +1,6 @@
 package com.sufow.action;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -35,6 +36,29 @@ public class MainAction {
 	public SufowResult querySufowResult(HttpServletRequest request){
 		SufowResult result = new SufowResult();
 		result.setMessage("sufow result is success");
+		return result;
+	}
+	
+	/***
+	 * ≤‚ ‘∑µªÿcookies
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping("/main/queryCookiesTest")
+	@ResponseBody
+	public SufowResult queryCookiesTest(HttpServletRequest request,HttpServletResponse response){
+		SufowResult result = new SufowResult();
+		
+		System.out.println(request.getSession().getId());
+		
+		Cookie []cookies = request.getCookies();
+		
+		for(Cookie c:cookies){
+			System.out.println(c.getName()+","+c.getValue());
+		}
+		
+		Cookie cookie = new Cookie("sufow", "sufowCookie");
+		response.addCookie(cookie);
 		return result;
 	}
 
