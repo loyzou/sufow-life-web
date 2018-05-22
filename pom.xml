@@ -6,6 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<spring-framework.version>4.2.0.RELEASE</spring-framework.version>
+		<servlet-api.versioin>3.1.0</servlet-api.versioin>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -43,31 +44,18 @@
 			<artifactId>spring-web</artifactId>
 			<version>${spring-framework.version}</version>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.2</version>
+		  <groupId>javax.servlet</groupId>
+		  <artifactId>javax.servlet-api</artifactId>
+		  <version>${servlet-api.versioin}</version>
 		</dependency>
+		
+		<!-- 引用公共包 -->
 		<dependency>
-			<groupId>org.xcb</groupId>
-			<artifactId>xcb-common</artifactId>
-			<version>2.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.7.4</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>2.7.4</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId>
-			<version>2.7.4</version>
+			<groupId>com.sufow</groupId>
+			<artifactId>sufow-common</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 
