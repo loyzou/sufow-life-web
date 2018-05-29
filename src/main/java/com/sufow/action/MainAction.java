@@ -14,11 +14,11 @@ import com.sufow.common.SufowResult;
 public class MainAction {
 	/***
 	 * 测试设置signId
-	 * @param request
-	 * @param response
-	 * @return
+	 * @param request 请求对象
+	 * @param response 输出对象
+	 * @return 返回结果
 	 */
-	@RequestMapping("/main/queryTest")
+	@RequestMapping("/account/main/queryTest")
 	@ResponseBody
 	public SufowResult queryTest(HttpServletRequest request,HttpServletResponse response){
 		SufowResult result = new SufowResult();
@@ -28,8 +28,8 @@ public class MainAction {
 	
 	/**
 	 * 测试返回其它项目中的对象
-	 * @param request
-	 * @return
+	 * @param request 请求对象
+	 * @return 返回结果
 	 */
 	@RequestMapping("/main/querySufowResult")
 	@ResponseBody
@@ -41,10 +41,11 @@ public class MainAction {
 	
 	/***
 	 * 测试返回cookies
-	 * @param request
-	 * @return
+	 * @param request 请求对象
+	 * @param response 输出对象
+	 * @return 返回一个Cookie
 	 */
-	@RequestMapping("/main/queryCookiesTest")
+	@RequestMapping("/account/main/queryCookiesTest")
 	@ResponseBody
 	public SufowResult queryCookiesTest(HttpServletRequest request,HttpServletResponse response){
 		SufowResult result = new SufowResult();

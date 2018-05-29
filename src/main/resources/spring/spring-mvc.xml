@@ -20,6 +20,12 @@
 	<!-- 支持格式转换 -->
 	<bean id="mappingJacksonHttpMessageConverter"  class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"> 
     </bean>
+    
+    <!-- 配置拦截器 -->
+    <mvc:interceptors>
+    	<bean class="com.sufow.intercepter.SufowInterceptor"></bean>
+    </mvc:interceptors>
+    
 <!--     
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">  
         <property name="messageConverters">  

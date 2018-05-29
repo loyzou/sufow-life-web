@@ -9,6 +9,8 @@
 		<param-value>classpath*:spring/spring*.xml</param-value>
 	</context-param>
 	
+	<!-- 监听器 -->
+	
 	<servlet>
 		<servlet-name>sufowLife</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
