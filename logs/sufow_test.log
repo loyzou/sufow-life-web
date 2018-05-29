@@ -1,0 +1,10 @@
+2018-05-29 11:07:03.431 INFO  DispatcherServlet:488 - FrameworkServlet 'sufowLife': initialization started
+2018-05-29 11:07:03.514 INFO  XmlWebApplicationContext:573 - Refreshing WebApplicationContext for namespace 'sufowLife-servlet': startup date [Tue May 29 11:07:03 CST 2018]; root of context hierarchy
+2018-05-29 11:07:03.639 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from file [E:\sufow\sufowLife\src\main\webapp\WEB-INF\classes\spring\spring-mvc.xml]
+2018-05-29 11:07:05.154 INFO  RequestMappingHandlerMapping:532 - Mapped "{[/main/querySufowResult]}" onto public com.sufow.common.SufowResult com.sufow.action.MainAction.querySufowResult(javax.servlet.http.HttpServletRequest)
+2018-05-29 11:07:05.156 INFO  RequestMappingHandlerMapping:532 - Mapped "{[/account/main/queryTest]}" onto public com.sufow.common.SufowResult com.sufow.action.MainAction.queryTest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-29 11:07:05.157 INFO  RequestMappingHandlerMapping:532 - Mapped "{[/account/main/queryCookiesTest]}" onto public com.sufow.common.SufowResult com.sufow.action.MainAction.queryCookiesTest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-29 11:07:06.156 INFO  RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'sufowLife-servlet': startup date [Tue May 29 11:07:03 CST 2018]; root of context hierarchy
+2018-05-29 11:07:06.329 INFO  RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'sufowLife-servlet': startup date [Tue May 29 11:07:03 CST 2018]; root of context hierarchy
+2018-05-29 11:07:06.556 INFO  SimpleUrlHandlerMapping:341 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2018-05-29 11:07:06.775 INFO  DispatcherServlet:507 - FrameworkServlet 'sufowLife': initialization completed in 3340 ms
