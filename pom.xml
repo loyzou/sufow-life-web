@@ -78,7 +78,14 @@
             <groupId>com.fasterxml.jackson.jr</groupId>  
             <artifactId>jackson-jr-all</artifactId>  
             <version>2.5.0</version>  
-        </dependency>  
+        </dependency> 
+        
+        <!-- Log4j包 -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
 		
 	</dependencies>
 
